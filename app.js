@@ -11,7 +11,7 @@
       prog    = require("commander"),
       restify = require("restify"),
       bunyan  = require("bunyan"),
-      proc    = require("./process"),
+      proc    = require("./lib/process"),
       log     = bunyan.createLogger({name: name}),
       server  = restify.createServer({name: name,
                                       log: log});
@@ -32,6 +32,11 @@
       return next();
     }
   );
+
+  server.get( "/css/:file", restify.serveStatic({
+    'directory': __dirname,
+    'default': 'main.css'
+ }));
 
 
   server.get("/:id/exchange/:key", function(req, res, next){
