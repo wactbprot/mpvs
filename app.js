@@ -11,7 +11,7 @@
       prog    = require("commander"),
       restify = require("restify"),
       bunyan  = require("bunyan"),
-      proc    = require("./process"),
+      proc    = require("./lib/process"),
       log     = bunyan.createLogger({name: name}),
       server  = restify.createServer({name: name,
                                       log: log});
