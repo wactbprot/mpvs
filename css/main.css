@@ -1,0 +1,24 @@
+/* Small reset */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+header{
+    padding: 10px 0;            
+    background-color: #4c2626;
+    background-image: linear-gradient(top, #6f3736, #4c2626);  
+    box-shadow: 0 1px 0 #fff, 0 -3px 3px #000 inset;
+}
+
+footer{
+    text-align: right;
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+aside{
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+}
