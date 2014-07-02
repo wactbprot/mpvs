@@ -112,6 +112,8 @@ div.serial {
    padding: 10px 10px 10px 10px;  
    background: #D8D8D8; 
    float:right;
+   border:1px solid;  
+   margin:10px 10px 10px 10px;  
 }
 
 div.parallel {
@@ -123,11 +125,14 @@ div.parallel {
 }
 
 .executed {
+    opacity: 0.8;
     background: #D7DF01;
 }
 .ready {
+    opacity: 0.8;
     background: #5FB404;
 }
-.working {
+.working { 
+    opacity: 0.8;
     background: #FE2E2E;
 }
