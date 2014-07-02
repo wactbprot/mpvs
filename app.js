@@ -37,6 +37,9 @@
     'directory': __dirname,
     'default': 'main.css'
  }));
+  server.get( "/img/:file", restify.serveStatic({
+    'directory': __dirname
+ }));
 
 
   server.get("/:id/exchange/:key", function(req, res, next){

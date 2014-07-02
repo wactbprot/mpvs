@@ -1,12 +1,27 @@
-/* Small reset */
+/* Small reset*/ 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
     display:block;
 }
 
 header {
-  background-color:#2C5463;
-  height:80px;
+  background-color:#424242;
+  height:150px;
+  background-image: url(../../img/CE_3.jpg)
+}
+
+
+section#content {
+    float:left; 
+    margin:auto;
+    margin-top:20px;
+    border:1px solid grey; /*+*/
+}
+
+footer {
+  background-color:#424242;
+  height:180px;
+  clear:both;
 }
 
 header h1 {
@@ -20,14 +35,12 @@ header h2 {
 }
 
 nav {
-  background-color:#2C5463;
+  background-color:#424242;
   height:40px;
 }
  
  
 nav ul {
-  font-family: Arial, Verdana;
-  font-size: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -39,16 +52,12 @@ nav ul li {
   float: left;
  
 }
- 
-nav li ul {
-  display: none;
-}
- 
+
 nav ul li a {
   display: block;
   text-decoration: none;
   padding: 7px 15px 3px 15px;
-  background: #2C5463;
+  background: #424242;
   color: #ffffff; 
   margin-left: 1px;
   white-space: nowrap;
@@ -56,4 +65,44 @@ nav ul li a {
   width:90px;
   text-align:center;
  
+}
+
+nav ul li a:hover {
+  background: #BDBDBD;
+  color:#000000
+}
+
+
+aside {
+    height:720px;
+    float:right; 
+    width:120px;
+    color: #ffffff;  
+    background-color:#424242;
+}
+
+aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+aside ul li {
+    position: relative;
+}
+
+aside ul li a {
+    text-decoration: none;
+    display: block;
+    background: #424242;  
+    padding: 7px 15px 3px 15px;
+    color: #ffffff; 
+    height:30px; /* Width and height of top-level aside items */
+    width:90px;
+    text-align:center;
+}
+
+aside ul li a:hover {
+  background: #BDBDBD;
+  color:#000000
 }
