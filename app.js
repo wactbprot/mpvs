@@ -40,6 +40,9 @@
   server.get( "/img/:file", restify.serveStatic({
     'directory': __dirname
  }));
+  server.get( "/js/:file", restify.serveStatic({
+    'directory': __dirname
+ }));
 
 
   server.get("/:id/exchange/:key", function(req, res, next){
