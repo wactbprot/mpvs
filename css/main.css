@@ -25,7 +25,6 @@ section#content {
     float:left;
     margin:auto;
     margin-top:20px;
-    border:1px solid grey; /*+*/
 }
 
 footer {
@@ -111,11 +110,24 @@ aside ul li a:hover {
 
 div.serial {
    padding: 10px 10px 10px 10px;  
-   width:60px;
-   background: #BDBDBD;
+   background: #D8D8D8; 
+   float:right;
 }
 
 div.parallel {
-   padding: 10px 10px 10px 10px;  
-   width:40px;
+   padding: 10px 10px 10px 10px;
+   margin:10px 10px 10px 10px;  
+   width:80px;
+   height:40px;
+   border:1px solid; 
+}
+
+.executed {
+    background: #D7DF01;
+}
+.ready {
+    background: #5FB404;
+}
+.working {
+    background: #FE2E2E;
 }
