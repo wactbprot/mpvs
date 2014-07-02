@@ -1,83 +1,84 @@
-/* Small reset*/ 
+/* Small reset*/
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
 header {
-  background-color:#424242;
-  height:150px;
-  background-image: url(../../img/CE_3.jpg)
+    height:150px;
+    background-image: url(../../img/CE_3.jpg)
 }
 
+header h1 {
+    color:#2E2E2E;
+    float: left;
+    padding: 20px 20px 20px 20px;
+}
+
+header h2 {
+    color:#2E2E2E;
+    float: right;
+    padding: 20px 20px 20px 20px;
+}
 
 section#content {
-    float:left; 
+    float:left;
     margin:auto;
     margin-top:20px;
     border:1px solid grey; /*+*/
 }
 
 footer {
-  background-color:#424242;
-  height:180px;
-  clear:both;
+    background-color:#424242;
+    height:180px;
+    clear:both;
 }
 
-header h1 {
-  float: left;
-  color: #ffffff; 
-}
-
-header h2 {
-  float: right;
-  color: #ffffff; 
-}
 
 nav {
-  background-color:#424242;
-  height:40px;
+    background-color:#424242;
+    height:40px;
 }
- 
- 
+
+
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
- 
+
 nav ul li {
-  display: block;
-  position: relative;
-  float: left;
- 
+    display: block;
+    position: relative;
+    float: left;
+
 }
 
 nav ul li a {
-  display: block;
-  text-decoration: none;
-  padding: 7px 15px 3px 15px;
-  background: #424242;
-  color: #ffffff; 
-  margin-left: 1px;
-  white-space: nowrap;
-  height:30px; /* Width and height of top-level nav items */
-  width:90px;
-  text-align:center;
- 
+    display: block;
+    text-decoration: none;
+    padding: 7px 15px 3px 15px;
+    background: #424242;
+    color: #ffffff;
+    margin-left: 1px;
+    white-space: nowrap;
+    height:30px; /* Width and height of top-level nav items */
+    width:90px;
+    text-align:center;
+
 }
 
 nav ul li a:hover {
-  background: #BDBDBD;
-  color:#000000
+    background: #BDBDBD;
+    color:#000000
 }
 
 
 aside {
     height:720px;
-    float:right; 
+    float:right;
     width:120px;
-    color: #ffffff;  
+    color: #ffffff;
     background-color:#424242;
 }
 
@@ -94,15 +95,15 @@ aside ul li {
 aside ul li a {
     text-decoration: none;
     display: block;
-    background: #424242;  
+    background: #424242;
     padding: 7px 15px 3px 15px;
-    color: #ffffff; 
+    color: #ffffff;
     height:30px; /* Width and height of top-level aside items */
     width:90px;
     text-align:center;
 }
 
 aside ul li a:hover {
-  background: #BDBDBD;
-  color:#000000
+    background: #BDBDBD;
+    color:#000000;
 }
