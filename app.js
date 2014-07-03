@@ -61,11 +61,19 @@
     next();
   });
 
-  server.get("/:id/content/:page/:no", function(req, res, next){
+  server.get("/:id/content/state/:no", function(req, res, next){
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    proc.content(req, function(s){res.write(s)}, function(){res.end()});
+    proc.state(req, function(s){res.write(s)}, function(){res.end()});
+    next();
+  });
+
+  server.get("/:id/content/io/:no", function(req, res, next){
+    res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
+    proc.io(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
