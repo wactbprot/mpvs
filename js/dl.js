@@ -1,19 +1,25 @@
 $( document ).ready(function() {
 
-  var stateCont = $(".contentstate"),
-      stateUrl  = stateCont
-                  .children("a")
-                  .attr("href");
-  stateCont.empty();
+  var cont = $("#content"),
+      url  = cont.children("a").attr("href");
 
-  var refreshState = function(){
-    $.ajax({url:stateUrl}).done(function(html){
-      stateCont.empty().append(html);
+  cont.empty();
+
+  var replace = function(){
+    $.ajax({url:url}).done(function(html){
+      cont.empty().append(html);
     });
   };
-  if(stateUrl){
-    refreshState()
-    setInterval( refreshState, 1000);
+
+  if(url){
+    if(cont.hasClass("state")){
+      replace()
+      setInterval( replace, 1000);
+    }
+
+    if(cont.hasClass("io")){
+      replace()
+    }
   }
 
 
