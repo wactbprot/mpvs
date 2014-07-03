@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
   var replace = function(){
     $.ajax({url:url}).done(function(html){
-      cont.empty().append(html);
+      cont.empty().append(html).hide().fadeIn("slow");
     });
   };
 
@@ -21,6 +21,4 @@ $( document ).ready(function() {
       replace()
     }
   }
-
-
 });
