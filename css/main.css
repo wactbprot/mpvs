@@ -3,6 +3,10 @@ article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
 }
+body {
+    margin:0 0 0 0;
+   
+}
 
 header {
     height:150px;
@@ -21,62 +25,10 @@ header h2 {
     padding: 20px 20px 20px 20px;
 }
 
-section#content {
-    float:left;
-    margin:auto;
-    margin-top:20px;
-}
-
-footer {
-    background-color:#424242;
-    height:180px;
-    clear:both;
-}
-
-
-nav {
-    background-color:#424242;
-    height:40px;
-}
-
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li {
-    display: block;
-    position: relative;
-    float: left;
-
-}
-
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    padding: 7px 15px 3px 15px;
-    background: #424242;
-    color: #ffffff;
-    margin-left: 1px;
-    white-space: nowrap;
-    height:30px; /* Width and height of top-level nav items */
-    width:90px;
-    text-align:center;
-
-}
-
-nav ul li a:hover {
-    background: #BDBDBD;
-    color:#000000
-}
-
-
 aside {
-    height:720px;
+    height:690px;
     float:right;
-    width:120px;
+    width:180px;
     color: #ffffff;
     background-color:#424242;
 }
@@ -98,7 +50,7 @@ aside ul li a {
     padding: 7px 15px 3px 15px;
     color: #ffffff;
     height:30px; /* Width and height of top-level aside items */
-    width:90px;
+    width:180px;
     text-align:center;
 }
 
@@ -106,6 +58,58 @@ aside ul li a:hover {
     background: #BDBDBD;
     color:#000000;
 }
+
+section#content {
+    float:left;
+    margin:auto;
+    margin-top:20px;
+}
+
+footer {
+    background-color:#424242;
+    height:180px;
+    clear:both;
+}
+
+
+nav {
+    background-color:#424242;
+    height:60px;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    position: relative;
+    float: left;
+
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    background: #424242;
+    color: #ffffff;
+    margin-left: 0;
+    white-space: nowrap;
+    height:40px; /* Width and height of top-level nav items */
+    width:90px;
+    text-align:center;
+
+}
+
+nav ul li a:hover {
+    background: #BDBDBD;
+    color:#000000
+}
+
 
 
 div.serial {
