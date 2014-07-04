@@ -67,10 +67,18 @@ aside ul li a:hover {
 
 footer {
     background-color:#424242;
-    height:180px;
+    height:180px; 
+    padding: 10px 10px 10px 10px;
     clear:both;
 }
 
+footer ul li{
+    color: #ffffff;
+}
+
+footer ul li a {
+    color: #ffffff;
+}
 
 nav {
     background-color:#424242;
@@ -121,11 +129,13 @@ div.serial {
 }
 
 div.parallel {
-   padding: 10px 10px 10px 10px;
-   margin:10px 10px 10px 10px;  
-   width:80px;
-   height:40px;
-   border:1px solid; 
+    text-align:center;
+    
+    padding: 10px 10px 10px 10px;
+    margin:10px 10px 10px 10px;  
+    width:80px;
+    height:20px;
+    border:1px solid; 
 }
 
 .executed {
