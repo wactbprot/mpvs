@@ -33,6 +33,7 @@ aside {
     background-color:#424242;
 }
 
+
 aside ul {
     margin: 0;
     padding: 0;
@@ -61,7 +62,7 @@ aside ul li a:hover {
 
 #content {
     float:left;
-    margin:10px 10px 10px 10px; 
+    margin:0px 0px 0px 0px; 
     padding: 10px 10px 10px 10px;
 }
 
@@ -149,4 +150,14 @@ div.parallel {
 .working { 
     opacity: 0.8;
     background: #FE2E2E;
+}
+
+td {
+    padding: 5px 10px 5px 10px;
+
+}
+
+tr:hover {
+    background: #BDBDBD;
+    color:#000000
 }
