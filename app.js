@@ -11,7 +11,8 @@
       prog    = require("commander"),
       restify = require("restify"),
       bunyan  = require("bunyan"),
-      proc    = require("./lib/process"),
+      output  = require("./lib/output"),
+      input   = require("./lib/input"),
       log     = bunyan.createLogger({name: name}),
       server  = restify.createServer({name: name,
                                       log: log});
@@ -39,7 +40,7 @@
  }));
   server.get( "/img/:file", restify.serveStatic({
     'directory': __dirname
- }));
+  }));
   server.get( "/js/:file", restify.serveStatic({
     'directory': __dirname
  }));
@@ -49,7 +50,7 @@
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    proc.exchange(req, function(s){res.write(s)}, function(){res.end()});
+    output.exchange(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
@@ -57,7 +58,7 @@
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    proc.main(req, function(s){res.write(s)}, function(){res.end()});
+    output.main(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
@@ -65,7 +66,7 @@
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    proc.state(req, function(s){res.write(s)}, function(){res.end()});
+    output.state(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
@@ -73,10 +74,22 @@
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    proc.io(req, function(s){res.write(s)}, function(){res.end()});
+    output.io(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
+  /**
+   * POST
+   * http://server:port/id/exchange
+   * - nimmt form dataen u.ä. entgegen
+   * - sendet aufbereitet an ssmp
+   */
+  server.post("/:id/section/:key", function(req, res, next){
+    input.form(req, function(rob){
+      res.send(rob);
+    });
+    next();
+  });
 
   /**
    * --- go!---
