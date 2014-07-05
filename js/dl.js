@@ -6,12 +6,10 @@ $( document ).ready(function() {
 
   var addCe = function(){
     $("button").on("click", function(e){
-
       e.preventDefault();
       var url    = $(this).attr("data-url"),
           parent = $(this).attr("data-parent"),
           method = $(this).attr("data-parent");
-      console.log(e)
     });
   }
 
