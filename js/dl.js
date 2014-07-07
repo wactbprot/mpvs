@@ -5,12 +5,17 @@ $( document ).ready(function() {
   cont.empty();
 
   var addCe = function(){
+
+    $("input").on("change", function(e){
+      $(this).attr("value", $(this).val());
+    });
+
     $("button").on("click", function(e){
-      e.preventDefault();
       var url    = $(this).attr("data-url"),
           parent = $(this).attr("data-parent"),
           method = $(this).attr("data-parent");
-    });
+      console.log($(this).parent(parent).html())
+      });
   }
 
   var replace = function(slow){
