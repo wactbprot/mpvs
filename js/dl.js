@@ -6,6 +6,7 @@ $( document ).ready(function() {
 
   var addCe = function(){
 
+
     $("input").on("change", function(e){
       $(this).attr("value", $(this).val());
     });
