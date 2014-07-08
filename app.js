@@ -85,7 +85,7 @@
    * - sendet aufbereitet an ssmp
    */
   server.post("/:id/section/:key", function(req, res, next){
-    input.form(req, function(rob){
+    input.section(req, function(rob){
       res.send(rob);
     });
     next();
