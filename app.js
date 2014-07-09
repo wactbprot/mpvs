@@ -84,10 +84,15 @@
    * - nimmt form dataen u.ä. entgegen
    * - sendet aufbereitet an ssmp
    */
-  server.post("/:id/section/:key", function(req, res, next){
-    input.section(req, function(rob){
-      res.send(rob);
-    });
+  server.post("/:id/:struct", function(req, res, next){
+    var struct =  req.params.struct;
+    if(input[struct]){
+      input[struct](req, function(rob){
+        res.send(rob);
+      });
+    }else{
+      res.send({error:"no input type named " + struct});
+    }
     next();
   });
 
