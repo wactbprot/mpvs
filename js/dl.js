@@ -12,12 +12,22 @@ $( document ).ready(function() {
     });
 
     $("button").on("click", function(e){
-      var url    = $(this).attr("data-url"),
-          parent = $(this).attr("data-parent");
-      // method just needed (DELETE id ...)
-  $.post( url, $(this).parent(parent).html());
-    });
-  }
+      var url     = $(this).attr("data-url"),
+          parent  = $(this).attr("data-parent");
+
+      $.ajax({
+        url  : url,
+        type : "POST", // the data-method is the method between mpvs and ssmp
+        data : $(this).parent(parent).html(),
+        success: function(data, textStatus, jqXHR){
+          replace(true);
+        },
+        error: function (jqXHR, textStatus, errorThrown){
+
+        }
+      });
+    })
+  };
 
   var replace = function(slow){
     $.ajax({url:url}).done(function(html){
