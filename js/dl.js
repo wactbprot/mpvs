@@ -12,9 +12,8 @@ $( document ).ready(function() {
     });
 
     $("button").on("click", function(e){
-      var url     = $(this).attr("data-url"),
-          parent  = $(this).attr("data-parent");
-
+      var parent  = $(this).attr("data-parent"),
+          url     = $(this).attr("data-url");
       $.ajax({
         url  : url,
         type : "POST", // the data-method is the method between mpvs and ssmp
@@ -23,7 +22,6 @@ $( document ).ready(function() {
           replace(true);
         },
         error: function (jqXHR, textStatus, errorThrown){
-
         }
       });
     })
