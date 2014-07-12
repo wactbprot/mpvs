@@ -3,6 +3,11 @@ article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
 }
+
+* {
+    font-family:Algerian;
+}
+
 body {
     margin:0 0 0 0;
    
@@ -25,28 +30,51 @@ header h2 {
     padding: 20px 20px 20px 20px;
 }
 
-aside {
+aside.views  {
     height:690px;
     float:right;
-    width:180px;
+    width:110px;
+    color: #ffffff;
+    background-color:#424242;
+}
+
+aside.ctrls  {
+    height:690px;
+    float:left;
+    width:80px;
     color: #ffffff;
     background-color:#424242;
 }
 
 
-aside ul {
+aside.ctrls ul li button {
+    border-style:none;
+    font-size:12px;
+    display: block;
+    background: #424242;
+    padding: 10px 15px 20px 15px;
+    color: #ffffff;
+    height:30px; /* Width and height of top-level aside items */
+    width:80px;
+    text-align:center;
+
+}
+
+
+aside  ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-aside ul li {
+aside  ul li {
     position: relative;
 }
 
-aside ul li a {
+aside.views  ul li a {
     text-decoration: none;
     display: block;
+    font-size:12px;
     background: #424242;
     padding: 7px 15px 3px 15px;
     color: #ffffff;
@@ -55,7 +83,12 @@ aside ul li a {
     text-align:center;
 }
 
-aside ul li a:hover {
+aside  ul li a:hover {
+    background: #BDBDBD;
+    color:#000000;
+}
+
+aside  ul li button:hover {
     background: #BDBDBD;
     color:#000000;
 }
