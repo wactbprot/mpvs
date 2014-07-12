@@ -10,7 +10,6 @@ footer,header,hgroup,menu,nav,section {
 
 body {
     margin:0 0 0 0;
-   
 }
 
 header {
@@ -162,8 +161,7 @@ div.serial {
 }
 
 div.parallel {
-    text-align:center;
-    
+    text-align:center;   
     padding: 10px 10px 10px 10px;
     margin:10px 10px 10px 10px;  
     width:80px;
@@ -186,10 +184,23 @@ div.parallel {
 
 td {
     padding: 5px 10px 5px 10px;
-
 }
 
 tr:hover {
     background: #BDBDBD;
     color:#000000
+}
+
+input {
+    border-style:groove;
+  
+}
+
+button {
+    border-style:none;
+    font-size:12px;
+    padding: 3px 8px 3px 8px;
+    background: #424242;
+    color: #ffffff;
+    text-align:center;
 }
