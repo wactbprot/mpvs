@@ -6,7 +6,6 @@ $( document ).ready(function() {
 
   var addCe = function(){
 
-
     $("input").on("change", function(e){
       $(this).attr("value", $(this).val());
     });
@@ -22,6 +21,9 @@ $( document ).ready(function() {
           replace(true);
         },
         error: function (jqXHR, textStatus, errorThrown){
+          console.log(jqXHR);
+          console.log(textStatus);
+          console.log(errorThrown);
         }
       });
     })
