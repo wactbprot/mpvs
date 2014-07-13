@@ -153,18 +153,20 @@ nav ul li a:hover {
 
 
 div.serial {
-   padding: 10px 10px 10px 10px;  
+   padding: 8px 8px 8px 8px;  
    background: #D8D8D8; 
-   float:right;
+   float:left;
    border:1px solid;  
    margin:10px 10px 10px 10px;  
 }
 
 div.parallel {
-    text-align:center;   
-    padding: 10px 10px 10px 10px;
-    margin:10px 10px 10px 10px;  
-    width:80px;
+    text-align:center;
+    font-size:10px;
+    float:right;
+    padding: 5px 5px 5px 5px;
+    margin:5px 5px 5px 5px;  
+    width:40px;
     height:20px;
     border:1px solid; 
 }
