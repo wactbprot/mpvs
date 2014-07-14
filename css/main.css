@@ -45,7 +45,6 @@ aside.ctrls  {
     background-color:#424242;
 }
 
-
 aside.ctrls ul li button {
     border-style:none;
     font-size:12px;
@@ -56,7 +55,6 @@ aside.ctrls ul li button {
     height:30px; /* Width and height of top-level aside items */
     width:80px;
     text-align:center;
-
 }
 
 
@@ -128,7 +126,6 @@ nav ul li {
     display: block;
     position: relative;
     float: left;
-
 }
 
 nav ul li a {
@@ -142,7 +139,6 @@ nav ul li a {
     height:40px; /* Width and height of top-level nav items */
     width:90px;
     text-align:center;
-
 }
 
 nav ul li a:hover {
@@ -150,35 +146,35 @@ nav ul li a:hover {
     color:#000000
 }
 
-
-
 div.serial {
    padding: 8px 8px 8px 8px;  
    background: #D8D8D8; 
    float:left;
    border:1px solid;  
-   margin:10px 10px 10px 10px;  
+   margin:5px 10px 5px 10px;  
 }
 
 div.parallel {
-    text-align:center;
-    font-size:10px;
-    float:right;
+    text-align: center;
+    font-size: 10px;
+    float: right;
     padding: 5px 5px 5px 5px;
-    margin:5px 5px 5px 5px;  
-    width:40px;
-    height:20px;
-    border:1px solid; 
+    margin: 5px 5px 5px 5px;  
+    width: 80px;
+    height: 10px;
+    border: 1px solid; 
 }
 
 .executed {
     opacity: 0.8;
     background: #D7DF01;
 }
+
 .ready {
     opacity: 0.8;
     background: #5FB404;
 }
+
 .working { 
     opacity: 0.8;
     background: #FE2E2E;
@@ -195,7 +191,6 @@ tr:hover {
 
 input {
     border-style:groove;
-  
 }
 
 button {
