@@ -36,7 +36,10 @@ $( document ).ready(function() {
               replace = function(slow){
                 $.ajax({url:url}).done(function(html){
                   if(slow){
-                    cont.empty().append(html).hide().fadeIn("slow", addCe);
+                    cont.empty()
+                    .append(html)
+                    .hide()
+                    .fadeIn("fast", addCe);
                   }else{
                     cont.empty().append(html);
                   }
@@ -48,7 +51,7 @@ $( document ).ready(function() {
   if(url){
     if(cont.hasClass("state")){
       replace(true);
-      setInterval( replace, 1000);
+      setInterval( replace, 800);
     }
 
     if(cont.hasClass("io")){
