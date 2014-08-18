@@ -1,7 +1,8 @@
 $( document ).ready(function() {
 
   var cont  = $("#content"),
-      url   = cont.children("a").attr("href");
+      url   = cont.children("a").attr("href"),
+      poll  = { state: 300};
 
   var addCe = function(){
     // input.on('change')
@@ -52,7 +53,7 @@ $( document ).ready(function() {
   if(url){
     if(cont.hasClass("state")){
       replace(true);
-      setInterval( replace, 800);
+      setInterval( replace, poll.state);
     }
 
     if(cont.hasClass("io")){

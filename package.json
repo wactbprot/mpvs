@@ -16,6 +16,9 @@
 	"handlebars":">=1.3.0",
 	"cheerio":">=0.17.0"
     },
+    "scripts": {
+	"mpvs": "bin/mpvs | bunyan -l info"
+    },
     "devDependencies": {},
     "optionalDependencies": {},
     "engines": {
