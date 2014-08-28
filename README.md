@@ -41,4 +41,12 @@ _/    _/    _/  _/_/_/        _/      _/_/_/
 ```
 measurement program view server
 ---------
+## next
+- substructs will have class dyn and be refreshed when 
 
+
+## todo
+- doc
+- messages
+-- audio
+-- text
