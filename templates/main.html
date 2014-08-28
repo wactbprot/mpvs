@@ -17,27 +17,32 @@
 		  data-url     = '/{{Id}}/button'
 		  data-api     = '/{{Id}}/ctrl/{{no}}'
 		  data-cmd     = 'load;run'
-		  data-method  = 'PUT' >load&run</button></li>
-        <li><button
+		  data-method  = 'PUT' >load&run</button>
+	</li>
+        <li>
+	    <button
                data-parent  = 'li'
                data-url     = '/{{Id}}/button'
                data-api     = '/{{Id}}/ctrl/{{no}}'
                data-cmd     = 'pause'
-               data-method  = 'PUT' >pause</button></li>
-        <li><button
+               data-method  = 'PUT' >pause</button>
+	</li>
+        <li>
+	    <button
                data-parent  = 'li'
                data-url     = '/{{Id}}/button'
                data-api     = '/{{Id}}/ctrl/{{no}}'
                data-cmd     = 'stop'
-               data-method  = 'PUT' >stop</button></li>
+               data-method  = 'PUT' >stop</button>
+	</li>
       </ul>
     </nav>
     <nav class='views'>
       <ul>
-        <li><a href='/{{Id}}/io/{{no}}'>I/O</a></li>
-        <li><a href='/{{Id}}/state/{{no}}'>State</a></li>
-        <li><a href='/{{Id}}/recipe/{{no}}'>Recipe</a></li>
-        <li><a href='/{{Id}}/id/{{no}}'>Id</a></li>
+        <li><a href='/{{Id}}/io/{{no}}'>io</a></li>
+        <li><a href='/{{Id}}/state/{{no}}'>state</a></li>
+        <li><a href='/{{Id}}/recipe/{{no}}'>recipe</a></li>
+        <li><a href='/{{Id}}/id/{{no}}'>id</a></li>
       </ul>
     </nav>
     <nav class='containers'>
