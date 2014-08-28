@@ -1,0 +1,30 @@
+{{#each this}}
+<tr>
+  <td>{{Customer}}</td>
+  <td>{{Device}}</td>
+  <td>{{ToDoType}}</td>
+  <td>{{Sign}}</td>
+  <td>{{Year}}</td>
+  <td>
+    <a href='http://localhost:5984/_utils/fauxton/index.html#/database/mp_db/{{Id}}' target='_blank'>Couch
+    </a>
+  </td>
+  <td><button
+         data-parent = 'td'
+         data-method ='PUT' 
+         data-url= '/{{id}}/button'
+         data-key='{{key}}'
+         data-cmd='load'
+         data-api='/{{id}}/id/{{Id}}' 
+         type='submit'></button>
+  </td>
+  <td><button
+         data-parent = 'td'
+         data-method ='DELETE' 
+         data-url= '/{{id}}/button'
+         data-key='{{key}}'
+         data-api='/{{id}}/id/{{Id}}' 
+         type='submit'>-</button>
+  </td>
+</tr>
+{{/each}}
