@@ -1,18 +1,18 @@
 <section>
-  <h2>state of container {{no}}</h2>
-{{#each taskstate}}
+  <h2>container {{no}}</h2>
+  {{#each taskstate}}
   <div class='serial'>
     {{#each step}}
-    <div class='parallel'>
-      <p class='{{State}}'>
-	{{TaskName}}
-	{{Action  }}
-	{{Comment }}
-	{{Value	  }}
-
-      </p>
+    <div class='parallel {{State}}' >
+      <a class='tooltip' href='#'><b>{{TaskName}}</b>
+      <span><b>{{TaskName}}</b><br>
+	{{Comment}}<br>
+	<b>Action:</b> {{Action}}<br>
+	<b>Value:</b> {{Value}}
+      </span>
+      </a>
     </div>
     {{/each}}
-  </div>
-{{/each}}
+  </div><br>
+  {{/each}}
 </section>
