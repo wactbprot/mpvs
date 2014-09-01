@@ -17,7 +17,7 @@
       server  = restify.createServer({name: name,
                                       log: log});
 
-  prog.version("0.0.1")
+  prog.version("0.0.2")
   .option("-P, --port <port>", "port (default is  8001)", parseInt)
   .parse(process.argv);
 
@@ -66,7 +66,7 @@
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
-    output.state(req, function(s){res.write(s)}, function(){res.end()});
+    output.taskstate(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
 
