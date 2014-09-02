@@ -2,10 +2,12 @@
 
 var  replaceHtml = function($elem, cb){
   var url = $elem.attr("data-url");
+ console.log(url)
   if(url){
     $.ajax({url:url})
     .done(function(html){
-      $elem.empty().append(html);
+
+      $elem.replaceWith(html);
     })
     .done(function(){
       if($.isFunction(cb)){
@@ -15,11 +17,7 @@ var  replaceHtml = function($elem, cb){
   }
 };
 
-var  poll = function(){
-  $(".poll").each(function(i){
-    replaceHtml($(this));
-  });
-}
+
 
 // synchronisiert
 // das html (insbesondere die value Attribute)
@@ -54,5 +52,11 @@ $( document ).ready(function() {
     armButtons();
     syncInput()
   });
-  setInterval( poll, 300);
+
+  setInterval(function(){
+    var $poll = $(".poll")
+    $poll.each(function(i){
+      replaceHtml($poll.eq(i));
+    });
+  }, 300);
 })

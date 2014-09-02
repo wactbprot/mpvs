@@ -53,7 +53,7 @@
     output.exchange(req, function(s){res.write(s)}, function(){res.end()});
     next();
   });
-
+ 
   server.get("/:id/:page/:no", function(req, res, next){
     res.writeHead(200, {
       'Content-Type': 'text/html'
@@ -71,6 +71,14 @@
   });
 
   server.get("/:id/content/io/:no", function(req, res, next){
+    res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
+    output.io(req, function(s){res.write(s)}, function(){res.end()});
+    next();
+  });
+
+  server.get("/:id/content/io/:no/:key", function(req, res, next){
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
