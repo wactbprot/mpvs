@@ -41,8 +41,6 @@
       <ul>
         <li><a href='/{{Id}}/io/{{no}}'>io</a></li>
         <li><a href='/{{Id}}/state/{{no}}'>state</a></li>
-        <li><a href='/{{Id}}/recipe/{{no}}'>recipe</a></li>
-        <li><a href='/{{Id}}/id/{{no}}'>id</a></li>
       </ul>
     </nav>
     <nav class='containers'>
@@ -52,12 +50,13 @@
         {{/each}}
       </ul>
     </nav>
-    <aside class='left messages'>
+    <aside class='left display'>
     </aside>
     <main id='content' class='{{page}}'>
-      <a href='/{{Id}}/content/{{page}}/{{no}}'>{{page}}/{{no}}</a>
+      <a href='/{{Id}}/content/{{page}}/{{no}}' 
+	 data-url='/{{Id}}/content/{{page}}/{{no}}'>{{page}}/{{no}}</a>
     </main>
-    <aside class='right'>
+    <aside class='right display'>
     </aside>
     <footer>
       <ul>
