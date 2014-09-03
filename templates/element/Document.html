@@ -1,4 +1,4 @@
-{{#each this}}
+{{#each Document}}
 <tr>
   <td>{{Customer}}</td>
   <td>{{Device}}</td>
@@ -12,18 +12,18 @@
   <td><button
          data-parent = 'td'
          data-method ='PUT' 
-         data-url= '/{{id}}/button'
-         data-key='{{key}}'
+         data-url= '/{{../id}}/button'
+         data-key='{{../key}}'
          data-cmd='load'
-         data-api='/{{id}}/id/{{Id}}' 
-         type='submit'></button>
+         data-api='/{{../id}}/id/{{Id}}' 
+         type='submit'>+</button>
   </td>
   <td><button
          data-parent = 'td'
          data-method ='DELETE' 
-         data-url= '/{{id}}/button'
-         data-key='{{key}}'
-         data-api='/{{id}}/id/{{Id}}' 
+         data-url= '/{{../id}}/button'
+         data-key='{{../key}}'
+         data-api='/{{../id}}/id/{{Id}}' 
          type='submit'>-</button>
   </td>
 </tr>

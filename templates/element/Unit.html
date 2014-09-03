@@ -1,7 +1,12 @@
 <label>Unit:</label>
-<input data-type='{{type}}' value='{{value}}' data-subkey='Unit' class='unit' list='unit-{{key}}' required={{required}}>
-<datalist id='unit-{{key}}'>
-  {{#each options}}
+<input data-type='{{Unit.type}}' 
+       value='{{Unit.value}}' 
+       data-subkey='Unit' 
+       class='unit' 
+       list='unit-{{Unit.key}}' 
+       required='{{Unit.required}}'>
+<datalist id='unit-{{Unit.key}}'>
+  {{#each Unit.options}}
   <option value='{{this}}'>
     {{/each}}
 </datalist>

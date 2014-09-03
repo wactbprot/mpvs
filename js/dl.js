@@ -2,18 +2,15 @@
 
 var  replaceHtml = function($elem, cb){
   var url = $elem.attr("data-url");
- console.log(url)
+
   if(url){
     $.ajax({url:url})
     .done(function(html){
-
       $elem.replaceWith(html);
-    })
-    .done(function(){
       if($.isFunction(cb)){
         cb();
       }
-    });
+    })
   }
 };
 
@@ -31,6 +28,7 @@ var syncInput = function(){
 // zurück an mpvs
 var  armButtons= function(){
   $("button").on("click", function(e){
+
     var parent  = $(this).attr("data-parent"),
         url     = $(this).attr("data-url"),
         html    = $(this).parent(parent).html();
@@ -39,6 +37,8 @@ var  armButtons= function(){
       type : "POST", // the data-method is the method between mpvs and ssmp
       data : html,
       success: function(data, textStatus, jqXHR){
+        armButtons();
+        syncInput();
       },
       error: function (jqXHR, textStatus, errorThrown){
         console.log(textStatus);
@@ -50,7 +50,7 @@ var  armButtons= function(){
 $( document ).ready(function() {
   replaceHtml($("#content").children("a"), function(){
     armButtons();
-    syncInput()
+    syncInput();
   });
 
   setInterval(function(){
