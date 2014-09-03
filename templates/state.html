@@ -1,18 +1,16 @@
 <section class='poll' data-url='../content/state/{{no}}'>
-  <h2>container {{no}}</h2>
+  <h2>Container: {{no}}</h2>
   {{#each taskstate}}
   <div class='serial'>
     {{#each step}}
     <div class='parallel {{State}}' >
-      <a class='tooltip' href='#'><b>{{TaskName}}</b>
-      <span><b>{{TaskName}}</b><br>
-	{{Comment}}<br>
+      <h5>{{TaskName}}</h5>
+      <p>{{Comment}}<br>
 	<b>Action:</b> {{Action}}<br>
 	<b>Value:</b> {{Value}}
-      </span>
-      </a>
+      </p>
     </div>
     {{/each}}
-  </div><br>
+  </div>
   {{/each}}
 </section>
