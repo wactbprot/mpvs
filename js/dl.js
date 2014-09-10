@@ -29,21 +29,23 @@ var syncInput = function(){
 var  armButtons= function(){
   $("button").on("click", function(e){
 
-    var parent  = $(this).attr("data-parent"),
+      var parent  = $(this).attr("data-parent"),
         url     = $(this).attr("data-url"),
-        html    = $(this).parent(parent).html();
-    $.ajax({
-      url  : url,
-      type : "POST", // the data-method is the method between mpvs and ssmp
-      data : html,
-      success: function(data, textStatus, jqXHR){
-        armButtons();
-        syncInput();
-      },
-      error: function (jqXHR, textStatus, errorThrown){
+          html    = $(this).parent(parent).html();
+      $.ajax({
+        url  : url,
+        type : "POST", // the data-method is the method between mpvs and ssmp
+        data : html,
+        success: function(data, textStatus, jqXHR){
         console.log(textStatus);
+        },
+        error: function (jqXHR, textStatus, errorThrown){
+        console.log(textStatus);
+      },
+        complete: function (jqXHR, textStatus){
+          console.log(textStatus);
       }
-    });
+      });
   });
 };
 
