@@ -254,11 +254,17 @@ input {
     border-style:groove;
 }
 
-button {
-    border-style:none;
-    font-size:12px;
-    padding: 3px 8px 3px 8px;
-    background: #424242;
-    color: #ffffff;
-    text-align:center;
+button.exchange {
+/*
+  border-style:none;
+  font-size:12px;
+  padding: 3px 8px 3px 8px;
+  background: #424242;
+  color: #ffffff;
+  text-align:center;
+  */
+}
+
+.poll {
+    background: #FFF8DC;
 }
