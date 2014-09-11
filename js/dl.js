@@ -1,6 +1,3 @@
-
-
-
 // synchronisiert
 // das html (insbesondere die value Attribute)
 var syncInput = function(){
@@ -50,15 +47,15 @@ var  toggleButton= function($this){
 }
 var  replaceHtml = function($elem, cb){
   var url = $elem.attr("data-url");
-  $elem.children("button").off("click");
+  $elem.children(".exchangeButton").off("click");
   if(url){
     $.ajax({url:url})
     .done(function(html){
       var $html =$(html);
-      $elem.replaceWith($html);
 
-      exchangeButton($html.children("button.exchange"));
-      toggleButton($html.children("button.toggle"));
+      exchangeButton($html.find(".exchangeButton"));
+      $elem.replaceWith($html);
+      toggleButton($html.find("button.toggle"));
       if($.isFunction(cb)){
         cb();
       }
@@ -67,9 +64,8 @@ var  replaceHtml = function($elem, cb){
 };
 
 $( document ).ready(function() {
-
+  exchangeButton($(".exchangeButton"));
   replaceHtml($("#content").children("a"), function(){
-    exchangeButton($("button.exchange"));
     syncInput();
   });
 
