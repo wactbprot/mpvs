@@ -1,0 +1,11 @@
+<select 
+   value='{{Select.value}}' 
+   class='select' 
+   type='select'
+   data-subkey='Select' 
+   data-type='{{Select.type}}' 
+   required='{{Select.required}}'>
+  {{#each Select.options}}
+  <option value='{{.}}'>{{.}}</option>
+  {{/each}}
+</select>

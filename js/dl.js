@@ -17,6 +17,7 @@ var  exchangeButton= function($this){
     var parent  = $(this).attr("data-parent"),
         url     = $(this).attr("data-url"),
         html    = $(this).parent(parent).html();
+
     $.ajax({
       url  : url,
       type : "POST", // the data-method is the method between mpvs and ssmp
@@ -66,8 +67,9 @@ var  replaceHtml = function($elem, cb){
 };
 
 $( document ).ready(function() {
-  exchangeButton($("button.exchange")); 
+
   replaceHtml($("#content").children("a"), function(){
+    exchangeButton($("button.exchange"));
     syncInput();
   });
 
