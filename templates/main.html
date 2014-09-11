@@ -10,6 +10,13 @@
       <h1>{{Name}}</h1>
       <h2>{{Description}}</h2>
     </header>
+    <nav class='containers'>
+      <ul>
+        {{#each Title}}
+        <li><a href='../io/{{@index}}'>{{this}}</a></li>
+        {{/each}}
+      </ul>
+    </nav>
     <nav class='ctrls'>
       <ul>
         <li>
@@ -64,15 +71,8 @@
     </nav>
     <nav class='views'>
       <ul>
-        <li><a href='/{{Id}}/io/{{no}}'>io</a></li>
+        <li><a href='/{{Id}}/io/{{no}}'>input/output</a></li>
         <li><a href='/{{Id}}/state/{{no}}'>state</a></li>
-      </ul>
-    </nav>
-    <nav class='containers'>
-      <ul>
-        {{#each Title}}
-        <li><a href='../io/{{@index}}'>{{this}}</a></li>
-        {{/each}}
       </ul>
     </nav>
     <aside class='left display'>

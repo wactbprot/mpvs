@@ -66,7 +66,7 @@ var  replaceHtml = function($elem, cb){
 };
 
 $( document ).ready(function() {
-  exchangeButton($("button.exchange"));
+  exchangeButton($("button.exchange")); 
   replaceHtml($("#content").children("a"), function(){
     syncInput();
   });
