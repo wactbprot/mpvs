@@ -4,6 +4,9 @@ var syncInput = function(){
   $("input").on("change", function(e){
     $(this).attr("value", $(this).val());
   });
+  $("select").on("change", function(e){
+    $(this).attr("value", $(this).val());
+  });
 };
 
 // schickt html unter parent
