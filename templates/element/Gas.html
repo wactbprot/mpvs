@@ -1,0 +1,10 @@
+<select 
+   value='{{Gas.value}}' 
+   class='select value' 
+   type='select'
+   data-subkey='Gas' 
+   data-type='{{Gas.type}}'>
+  {{#each Gas.options}}
+  <option value='{{.}}'>{{.}}</option>
+  {{/each}}
+</select>

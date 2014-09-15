@@ -1,0 +1,10 @@
+<select 
+   value='{{targetPressure.value}}' 
+   class='select value' 
+   type='select'
+   data-subkey='targetPressure' 
+   data-type='{{targetPressure.type}}' 
+  {{#each targetPressure.options}}
+  <option value='{{value}}'>{{display}}</option>
+  {{/each}}
+</select>

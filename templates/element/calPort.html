@@ -1,10 +1,9 @@
 <select 
-   value='{{Select.value}}' 
+   value='{{calPort.value}}' 
    class='select value' 
    type='select'
    data-subkey='calPort' 
-   data-type='{{calPort.type}}' 
-   required='{{calPort.required}}'>
+   data-type='{{calPort.type}}'>
   {{#each calPort.options}}
   <option value='{{.}}'>{{.}}</option>
   {{/each}}
