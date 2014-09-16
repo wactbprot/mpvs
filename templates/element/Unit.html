@@ -1,11 +1,11 @@
 <label>Unit:</label>
-<input data-type='{{Unit.type}}' 
-       value='{{Unit.value}}' 
-       data-subkey='Unit' 
-       class='unit value' 
-       list='unit-{{Unit.key}}'>
+<input data-type='{{Unit.type}}'
+value='{{Unit.value}}'
+data-subkey='Unit'
+class='unit value'
+list='unit-{{Unit.key}}'>
 <datalist id='unit-{{Unit.key}}'>
-  {{#each Unit.options}}
-  <option value='{{this}}'>
-    {{/each}}
+{{#each Unit.options}}
+<option value='{{this}}'>
+{{/each}}
 </datalist>

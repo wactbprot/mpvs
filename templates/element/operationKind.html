@@ -1,0 +1,10 @@
+<select 
+   value='{{operationKind.value}}' 
+   class='select value' 
+   type='select'
+   data-subkey='operationKind' 
+   data-type='{{operationKind.type}}'>
+  {{#each operationKind.options}}
+  <option value='{{value}}'>{{display}}</option>
+  {{/each}}
+</select>
