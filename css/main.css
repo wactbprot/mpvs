@@ -271,3 +271,12 @@ button.exchange {
 .poll {
     background: #FFF8DC;
 }
+
+div.bool {
+    min-width: 120px;
+    max-width: 121px;
+    min-height: 13px;
+    max-height: 14px; 
+    border: solid;
+}
+
